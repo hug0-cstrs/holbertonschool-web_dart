@@ -1,6 +1,6 @@
-void outer(String name, String id){
-  void inner(){
-    print("Hello, $name, your id is $id");
+void outer(String name, String id) {
+  String inner() {
+    return "Hello, $name, your id is $id";
   }
-  inner();
+  print(inner());
 }
