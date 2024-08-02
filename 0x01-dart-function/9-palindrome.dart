@@ -1,8 +1,10 @@
-bool isPalindrome(String s){
-  for (int i = 0; i < s.length ~/ 2; i++) {
-    if (s[i] != s[s.length - i - 1]) {
-      return false;
-    }
+bool isPalindrome(String s) {
+  if (s.length < 3) {
+    return false;
   }
-  return true;
+  String reversed = "";
+  for (int i = s.length - 1; i >= 0; i--) {
+    reversed += s[i];
+  }
+  return reversed == s;
 }
